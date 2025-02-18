@@ -1,0 +1,30 @@
+'use client';
+import 'react-tabs/style/react-tabs.css';
+import { useState } from 'react';
+import {Tab, Tabs, TabList, TabPanel} from 'react-tabs';
+
+function TabsPlanetas({ planet }) {
+    const [selectedIndex, setSelectedIndex] = useState(0); // Para controlar la pestaña activa
+
+  return (
+    <Tabs selectedIndex={selectedIndex} onSelect={(index) => setSelectedIndex(index)}> {/* Manejo de selección */}
+      <TabList>
+        <li className="react-tabs__tab">Masa</li> {/* Elementos li para las pestañas */}
+        <li className="react-tabs__tab">Distancia al Sol</li>
+        <li className="react-tabs__tab">Temperatura</li>
+      </TabList>
+
+      <TabPanel>
+        <p>{planet?.mass || "Información no disponible"}</p> {/* Manejo de datos opcionales */}
+      </TabPanel>
+      <TabPanel>
+        <p>{planet?.distance || "Información no disponible"}</p>
+      </TabPanel>
+      <TabPanel>
+        <p>{planet?.temperature || "Información no disponible"}</p>
+      </TabPanel>
+    </Tabs>
+  );
+  }
+  
+  export default TabsPlanetas;
