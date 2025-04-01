@@ -39,7 +39,7 @@ export default function App() {
     <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
       <View style={styles.container}>
         <View style={styles.header}>
-          <Text style={styles.titulo}>RESERVAS RESTAURANTE</Text>
+          <Text style={styles.titulo}>RESERVAS RESTAURANTE UDB</Text>
         </View>
         <View style={styles.formulario}>
           <TouchableHighlight onPress={() => setMostrarForm(true)} 
